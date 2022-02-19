@@ -9,6 +9,10 @@ class Colours {
 
     fun numberOfColours (): Int{
         //TODO return the size of the colours list
+        fun main(args:List<String>){
+            val list = listOf<String>()
+            val size = list.size
+        }
         return 0
     }
 
@@ -36,10 +40,11 @@ class Colours {
         //TODO return the colours starting with the letter passed as a parameter
         return listOf("this should return colours that start with ${letter}")
     }
-
+//Reference: Kotlin.org/docs/constructing-collections
     fun coloursWithSpecificNumberOfChars(size: Int) : List<String>{
         //TODO return the colours that have exactly the same number of chars as the number passed as a parameter
-        return listOf("this should return colours that have ${size} chars")
+        val largerThan6 = colours.filter { it.length >= 6 }
+        return (largerThan6)
     }
 
     fun coloursWithLessCharsThan(size: Int) : List<String>{
